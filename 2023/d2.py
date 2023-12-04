@@ -14,7 +14,7 @@ for lines in get_data(day=2, year=2023, session=session_id).split('\n'):
 
 # Part 1
 
-total = 0
+p1 = 0
 max_scores = {'red':12, 'green':13, 'blue':14}
 
 for idx in range(len(arr)):
@@ -27,13 +27,13 @@ for idx in range(len(arr)):
                 break
 
     if valid:
-        total += idx + 1
+        p1 += idx + 1
 
-print('Part 1:', total)
+print('Part 1:', p1)
 
 # Part 2 
 
-total = 0
+p2 = 0
 
 for idx in range(len(arr)):
     min_scores = {'red':0, 'green':0, 'blue':0}
@@ -46,6 +46,6 @@ for idx in range(len(arr)):
     score = 1
     for key, val in min_scores.items():
         score *= val
-    total += score
+    p2 += score
 
-print('Part 2:', total)
+print('Part 2:', p2)

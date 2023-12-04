@@ -10,7 +10,7 @@ for lines in get_data(day=1, year=2023, session=session_id).split('\n'):
 
 # Part 1
 
-total = 0
+p1 = 0
 
 for code in arr:
     letters = []
@@ -21,9 +21,9 @@ for code in arr:
         add = int(letters[0]*2)
     if len(letters) > 1:
         add = int(letters[0] + letters[-1])
-    total += add
+    p1 += add
 
-print('Part 1:', total)
+print('Part 1:', p1)
 
 # Part 2
 
@@ -37,7 +37,7 @@ number_map = {'one':'1',
        'eight':'8', 
        'nine':'9'}
 
-total = 0
+p2 = 0
 
 for code in arr:
     og = code
@@ -55,6 +55,6 @@ for code in arr:
         add = int(letters[0]*2)
     if len(letters) > 1:
         add = int(letters[0] + letters[-1])
-    total += add
+    p2 += add
 
-print('Part 2:', total)
+print('Part 2:', p2)
